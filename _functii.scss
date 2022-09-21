@@ -1,0 +1,33 @@
+@import "_variabile.scss";
+
+@mixin imgcont($a: auto, $b: center, $c: 50%, $d: grid) {
+  margin: $a;
+  align-items: $b;
+  width: $c;
+  display: $d;
+}
+
+@mixin htmlbody($a: 100%, $b: 100%) {
+  height: $a;
+  width: $b;
+}
+
+@mixin profimg(
+  $a: relative,
+  $b: hidden,
+  $c: 0,
+  $d: 70%,
+  $e: none,
+  $f: 0,
+  $g: 15px,
+  $h: $culoare1
+) {
+  position: $a;
+  overflow: $b;
+  margin-top: $c;
+  width: $d;
+  border: $e;
+  border-radius: $f;
+  font-size: $g;
+  background: $h;
+}
