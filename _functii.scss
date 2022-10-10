@@ -12,22 +12,4 @@
   width: $b;
 }
 
-@mixin profimg(
-  $a: relative,
-  $b: hidden,
-  $c: 0,
-  $d: 70%,
-  $e: none,
-  $f: 0,
-  $g: 15px,
-  $h: $culoare1
-) {
-  position: $a;
-  overflow: $b;
-  margin-top: $c;
-  width: $d;
-  border: $e;
-  border-radius: $f;
-  font-size: $g;
-  background: $h;
-}
+

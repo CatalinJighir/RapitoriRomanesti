@@ -1,10 +1,10 @@
 $(document).ready(function () {
-  // Buton sa te intorci la prima pagina
+  // Return button first page
   $(".acasa").click(function () {
     window.location.href = "index.html";
   });
 
-  // Login - Autentificare (creare cont nou)
+  // Login - Autenticate (new account)
   const arrayUser = [];
 
   $(".authenticate").click(function () {
@@ -30,15 +30,14 @@ $(document).ready(function () {
       arrayUser.push(phone.val());
       arrayUser.push(address.val());
 
-      // Aici sunt elementele care vor aparea in profil dupa autentificare
-
+      // Here are the elements that will appear in the profile after authentication
       localStorage.setItem("nume", nume.val());
       localStorage.setItem("prenume", prenume.val());
       localStorage.setItem("email", email.val());
       localStorage.setItem("phone", phone.val());
       localStorage.setItem("address", address.val());
 
-      // Aici am ascuns elementele pentru autentificare
+      // Here I have hidden the elements for authentication
       prenume.val("");
       nume.val("");
       email.val("");
@@ -50,8 +49,7 @@ $(document).ready(function () {
     }
   });
 
-  // Sign in - Logare
-
+  // Sign in
   $(".login").click(function () {
     let emailCheck = $("#emailCheck").val();
     let pwdCheck = $("#pwdCheck").val();
@@ -64,7 +62,7 @@ $(document).ready(function () {
     }
   });
 
-  // Metoda afisare user sau autentificare + logout
+  // User display method or authentication + logout
   let user = localStorage.getItem("user");
 
   if (user !== null) {
@@ -79,16 +77,14 @@ $(document).ready(function () {
     $("#pozaprofil2").hide();
   }
 
-  // Metoda log out
-
+  // Log out method
   $("#logout").click(function () {
     localStorage.clear();
     alert("Ati fost deconectat cu succes");
     window.location.href = "index.html";
   });
 
-  // Profil - schimbare poza
-
+  // Profile - photo change localy
   const fn1 = $(function () {
     $("#fileupload").change(function (event) {
       let x = URL.createObjectURL(event.target.files[0]);
@@ -109,8 +105,7 @@ $(document).ready(function () {
     }
   });
 
-  // Aici am facut legatura pentru a salva datele din interistrare in profil automat
-
+  // Here I made the connection to save the data from the registration to appear in the profile page
   $(function () {
     $("#nume1").val(localStorage.getItem("nume"));
     $("#prenume1").val(localStorage.getItem("prenume"));
@@ -122,8 +117,7 @@ $(document).ready(function () {
     $("#codpostal1").val(localStorage.getItem("oras"));
   });
 
-  // Aici se salveaza date noi in profil si pot fi editabile
-
+  // New profile data is saved here and can be edited in profile page
   $("#profilebutton").click(function () {
     let phone = $("#telefon1");
     let address = $("#adresa1");
