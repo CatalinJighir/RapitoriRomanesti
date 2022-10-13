@@ -1,12 +1,10 @@
-@import "_variabile.scss";
-@import "_functii.scss";
+@import "_variables.scss";
+@import "_functions.scss";
 /*The general selector that resets the standard spaces*/
 *{
   margin: 0;
   padding: 0;
-  box-sizing: 0;
-  border: 0;
-  box-sizing: 0;
+  box-sizing: border-box;
 }
 
 /*Body styling*/
@@ -272,17 +270,6 @@ height: 50px;
   height: 40px;
   border-radius: 50px;
   margin-right: 10px;
-}
-
-/* Transport page styling*/
-.backcover {
-  background-image: url("imagini/fan-courier-logo.png");
-  background-repeat: no-repeat;
-  background-position: right top;
-  background-attachment: inherit;
-  background-size: 100px;
-  width: 100%;
-  height: auto;
 }
 
 /* Footer styling */

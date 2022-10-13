@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despre pescuit la rapitori</title>
+    <!--Icon image-->
+    <link rel="icon" type="image/x-icon" href="imagini/Stiuca-removebg-preview.png">
+    <!-- Bootsrap 5.2 + bootsrap icons + font awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="main.css">
+  </head>
+
+  <body>
+    <!--Section 1 - Header -->
+    <header>
+      <div class="container-fluid flex-wrap fixed-top">
+        <div class="row border background__color">
+          <div class="col-2 pt-2">
+              <a href="index.html" class="logo__image"></a>
+          </div>
+
+          <div class="col-10">
+            <nav class="navbar navbar-expand-md navbar-dark">
+              <a href="#" class="navbar-brand"></a>
+              <button class="navbar-toggler bg-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                  <li>
+                    <button class="btn btn-secondary ms-auto mt-2 nav-link text-white px-1" id="logout">Deconectați-vă</button>
+                  </li>
+                  <li class="nav-item ms-auto">
+                    <a href="sign.html" class="link-dark nav-link decoration__text"><img src="imagini/poze-profil/white-person-profile-icon-round-3d-ui-button-vector-illustration_541075-1030.webp" alt="Poza profil" id="pozaprofil1" class="profile_image"><span id="sign">Autentificare / Înregistrare</span></a>
+                  </li>
+                  <li class="nav-item ms-auto">
+                    <a href="profile.html" class="link-dark nav-link decoration__text"><img src="imagini/poze-profil/white-person-profile-icon-round-3d-ui-button-vector-illustration_541075-1030.webp" alt="Poza profil" id="pozaprofil2" class="profile_image"><span id="displayUser"></span></a>
+                  </li>
+                  <li class="nav-item link-dark nav-link ms-auto decoration__text" id="cartIcon">
+                    <i class="bi bi-cart2 h4 pe-1"></i>Cos de Cumparaturi
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+
+        <!--Section 2 - Logo and Search -->
+        <div class="row bg-light border background__color">
+          <div class="col">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+              <a href="#" class="navbar-brand"></a>
+              <button class="navbar-toggler me-auto background__color" type="button" data-bs-toggle="collapse" data-bs-target="#navblog">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navblog">
+                <ul class="navbar-nav me-auto flex-wrap justify-content-between">
+                  <li class="nav-item me-auto">
+                    <a href="#Despre" class="link-dark"><i class="bi bi-caret-right h4"></i>Despre pescuitul la rapitori</a>
+                  </li>
+                  <li class="nav-item me-auto">
+                    <a href="#Specii" class="link-dark"><i class="bi bi-caret-right h4"></i>Specii rapitori romanesti</a>
+                  </li>
+                  <li class="nav-item me-auto">
+                    <a href="#Locuri" class="link-dark"><i class="bi bi-caret-right h4"></i>Locuri de pescuit in Romania</a>
+                  </li>
+                  <li class="nav-item me-auto">
+                    <a href="#Perioade" class="link-dark"><i class="bi bi-caret-right h4"></i>Perioade anuale</a>
+                  </li>
+                  <li class="nav-item me-auto">
+                    <a href="#Permis" class="link-dark"><i class="bi bi-caret-right h4"></i>Permis pescuit si Permis de granita</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+
+          <div class="col col-xl-3 col-lg-3 col-md-3 navbar">
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Cauta produse" aria-label="Search" id="search-item" onkeyup="search()">
+              <a href="javascript:void(0);"><i class="bi bi-search h4 pe-1 text-success"></i></a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+
+          <!--Section 3 Blog-->
+      <main>
+          <section class="container space_top_m">
+            <div class="row align-items-center justify-content-between">
+              <h2 class="mx-auto text-center mb-3">Despre pescuitul la rapitori</h2>
+              <hr>
+              <div class="col-md">
+                <img src="imagini/blog/lansete.jpg" class="img-fluid rounded" alt="Lansete">
+              </div>
+              <div class="col-md p-3">
+                <h2>Informatii generale</h2>
+                <ul>
+                  <li class="mb-3">Partidele de pescuit la rapitor sunt incitante. Stilul in sine este unul dinamic, care consuma multa energie. Pescarul de spinning va fi suspus de fiecare data unor provocari care il solicita la maxim.</li> 
+                  <li class="mb-3">Fie ca discutam de conditii meteo sau geografia locului unde va pescui la rapitor, se ard multe calorii intr-o astfel de partida de pescuit.</li> 
+                  <li class="mb-3">Pentru a prinde un salau, somn, avat, biban sau clean, trebuie sa stim cateva lucruri despre echipamentul de pescuit la rapitor.</li> 
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="container">
+            <div class="row align-items-center justify-content-between">
+              <div class="col-md p-5">
+                <h2>Lanseta pentru pescuit la rapitor</h2>
+                    <ul>
+                        <li class="mb-3">Lanseta pentru pescuit la rapitor are mai multe forme. Este gandita sa asigure toate scenariile in care pescarul de rapitor se poate gasi. Exista situatii cand este nevoie sa realizam un pescuit la spinning la departare de mal, cu naluci grele, sau din barca.</li>
+                        <li>Nalucile pentru pescuit la rapitor influenteaza la randul lor, datele constructive ale unei lansete de pescuit la rapitor. Distanta de asemenea. Si nu numai. Trebuie luata in calcul si specia tinta alaturi de dimensiunea exemplarelor din areal.</li>
+                    </ul>
+              </div>
+              <div class="col-md">
+                <img src="imagini/blog/combo-rapitor.jpg" class="img-fluid rounded" alt="Combo-rapitor">
+              </div>
+            </div>
+          </section>
+
+          <section class="container">
+            <div class="row align-items-center justify-content-between">
+              <div class="col-md">
+                <img src="imagini/blog/lansete-rapitori.jpg" class="img-fluid rounded" alt="Lansete-rapitor">
+              </div>
+              <div class="col-md p-3">
+                <h2>Lanseta de spinning pentru pescuit la rapitor</h2>
+                <ul>
+                  <li class="mb-3"> Lanseta de spinning pentru pescuit la rapitor este usor de identificat in rafturile unui magazin de pescuit. Se aseamana cu lansetele de crap, doar ca sunt mult mai “ firave “ aparent. In realitate, sunt capabile sa sustina greutati remarcabile si sa lupte “ corp la corp “ cu pesti rapitori si de 60 de kilograme.</li> 
+                  <li>  Vin in lungiumi cuprinse intre 1,90 metri si 2,70 metri uzuzal. Exceptional le vom gasi construite pe lungimi si de 3,00 metri. Sunt gandite atat pe puteri de lansare cat si pe tipuri de actiune. Acesti ultimi doi termeni ii vom descoperi putin mai tarziu.</li> 
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="container">
+            <div class="row align-items-center justify-content-between">
+              <div class="col-md p-5">
+                <h2>Lanseta de casting pentru pescuit la rapitor</h2>
+                    <ul>
+                        <li class="mb-3">Mandrina cu “ tragaci” este primul semn ca am luat contact cu o lanseta de baitcast pentru pescuit la rapitor. Urmatorul aspect putin ciudat vor fi inelele. Sunt multe si mici in diametru. In majoritatea cazurilor, aceste lansete nu depasesc 2,20 metri.</li>
+                        <li>Au fost concepute pentru pescuitul la rapitor din barca. Acest stil de pescuit ofera acces mai mare pescarului de rapitor in zonele unde exista potential piscicol tinta ridicat. Faptul ca poti sonda o zona mai mare este un avantaj. Cu cat zona de explorare se mareste, aici avand avantajul barcii, cu atat lungimea lansetei scade. Dar si aici avem o bariera minima a lungimii. 1,90 metri.</li>
+                    </ul>
+              </div>
+              <div class="col-md">
+                <img src="imagini/blog/Captura-biban-2.jpg" class="img-fluid rounded" alt="Captura-biban">
+              </div>
+            </div>
+          </section>
+
+          <section class="container">
+            <div class="row align-items-center justify-content-between">
+              <div class="col-md">
+                <img src="imagini/blog/naluci-rapitor-2.jpg" class="img-fluid rounded" alt="Naluci-rapitor">
+              </div>
+              <div class="col-md p-3">
+                <h2>Actiunea lansetei pentru pescuit la rapitor</h2>
+                <ul>
+                  <li class="mb-3"> Stim clar ca unele lansete pentru pescuit la rapitor sunt mai flexibile, in vreme ce altele sunt mai rigide. Usor de sesizat acest aspect atunci cand tinem in mana lanseta si incercam miscari repetate in vertical ( sus / jos) . Aceasta flexibiltate ofera pescarului de rapitor repere importante care il ajuta sa aleaga o lanseta pretabila anumitor naluci si pesti.</li> 
+                  <li class="mb-3">  Punctele unde lanseta se curbeaza in aceasta miscare , dezvaluie tipologia actiunii cu care a fost echipata. Actiunea lansetelor de pescuit la rapitor poate fi segmentata pe 3 trepte : rapida, moderata sau parabolica.</li> 
+                  <li>Aceste tipuri de actiune fac referire la punctul de unde sub tensiune aplicata, lanseta se va indoi si cat de mult o va face. In functie de tipologia constructiva a nalucii de rapitor la care apelam, vom decide si ce lanseta este indicat sa folosim.</li> 
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="container">
+            <div class="row align-items-center justify-content-between">
+              <div class="col-md p-5">
+                <h2>Mulineta de spinning</h2>
+                    <ul>
+                        <li class="mb-3">In pescuit la rapitor, “ fara mulineta e pustiu….” . Dar lasand gluma la o parte, mulineta are un aport foarte mare in acest stil de pescuit. Daca intamplator putem intepa pesti mai corpolenti care sunt peste clasa lansetei pe care o utilizam, atunci mulineta scapa turma cum se spune.</li>
+                        <li>Mulineta ofera distanta, anima nalucile , asigura o frana de lupta si ajusteaza tensiunile de la intepare si din drill. Adica putin mai mult ( dar vital ) fata de lanseta. In functie de clasa lansetelor pe care le folosim, avem si mulinetele portivite. Atat la spinning cat si in tehnica baitcast.</li>
+                    </ul>
+              </div>
+              <div class="col-md">
+                <img src="imagini/blog/mulineta-baitcast.jpg" class="img-fluid rounded" alt="Mulitena baicast">
+              </div>
+            </div>
+          </section>
+
+          <section class="container">
+            <div class="row align-items-center justify-content-between">
+              <div class="col-md">
+                <img src="imagini/blog/swimbait-hibrid.jpg" class="img-fluid rounded" alt="Swimbait hibrid">
+              </div>
+              <div class="col-md p-3">
+                <h2>Struna pentru pescuit la rapitor</h2>
+                <ul>
+                  <li class="mb-3">Majoritatea pestilor rapitori au in dotare dinti. Unii mai ascutiti, ganditi sa taie adanc si rapid, altii mai mici, ganditi sa prinda ca in cusca prada.</li> 
+                  <li class="mb-3">Firele, indiferent de natura constructiva nu au sanse intr-un astfel de proces. Aici intervine clasa de inaintas dedicat. Denumirea tehnica este de struna.</li> 
+                  <li>Struna a aparut ca necesitate in special in pescuitul la stiuca. Dintii din dotarea “doamnei” sunt cu adevarat taiosi. Materiale precum titan, wolfram au aparut in magazinele de pescuit in urma testelor. Rezista la atacurile stiucilor flamande.</li> 
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="container">
+            <div class="row align-items-center justify-content-between">
+              <div class="col-md p-5">
+                <h2>Alegerea nalucilor pentru pescuit la rapitor</h2>
+                    <ul>
+                        <li class="mb-3">Daca firele de pescuit sunt un univers, nalucile pentru pescuit la rapitor sunt un adevarat razboi. Al producatorilor. Fiecare are “soldati”, “ trupe speciale” si “divizie de blindate” . Blindatele mortii cum a spus Sven Hassel in romanul sau.</li>
+                        <li class="mb-3">Cele doua mari clase de naluci pentru pescuit la rapitor sunt cele moi ( siliconice ) si cele realizate din materiale dure. In ultima categorie intra voblere, lingurite si derivate. Sa nu uitam ca ultimii ani au adus pe rafturile magazinului de pescuit si hibrizi. Naluci realizate mixt, avand in componenta atat parti metalice cat si parti siliconice.</li>
+                        <li>Nalucile moi pentru pescuit la rapitor sunt realizate din materiale cu textura moale. Denumirea sub care au fost “ inmatriculate” este de shad-uri ( naluci moi in forma de pestisori), grub-uri ( naluci moi cu un corp cilindric si o coada de tip virgula ), creaturi ( naluci moi care imita viermi sau crustacee).</li>
+                    </ul>
+              </div>
+              <div class="col-md">
+                <img src="imagini/blog/Naluci-soft.jpg" class="img-fluid rounded" alt="Naluci soft">
+              </div>
+            </div>
+          </section>
+        <hr>
+
+        <!--Section 4 - Details and contact-->
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-12 col-md-6 col-xl-3">
+              <ul>
+                <li class="footer"><span><b>PRODUSE</b></span></li>
+                <li class="footer"><span><a href="javascript:void(0);" class="link-dark csm-page-link">Parteneri</a></span></li>
+                <li class="footer"><span><a href="javascript:void(0);" class="link-dark csm-page-link">Reduceri de pret</a></span></li>
+                <li class="footer"><span><a href="javascript:void(0);" class="link-dark csm-page-link">Produse noi</a></span></li>
+                <li class="footer"><span><a href="javascript:void(0);" class="link-dark csm-page-link">Cele mai cumparate</a></span></li>
+              </ul>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-xl-3">
+              <ul>
+                <li class="footer"><span><b>FIRMA NOASTRA</b></span></li>
+                <li class="footer"><span><a href="transport.html" class="link-dark csm-page-link">Transport</a></span></li>
+                <li class="footer"><span><a href="termsandconditions.html" class="link-dark csm-page-link">Termeni si conditii</a></span></li>
+                <li class="footer"><span><a href="javascript:void(0);" class="link-dark csm-page-link">Despre noi</a></span></li>
+                <li class="footer"><span><a href="javascript:void(0);" class="link-dark csm-page-link">Contacteaza-ne</a></span></li>
+              </ul>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-xl-3">
+              <ul>
+                <li class="footer"><span><b>CONTUL TAU</b></span></li>
+                <li class="footer"><span><a href="javascript:void(0);" class="link-dark csm-page-link">Comenzi</a></span></li>
+                <li class="footer"><span><a href="javascript:void(0);" class="link-dark csm-page-link">Adrese</a></span></li>
+                <li class="footer"><span><a href="javascript:void(0);" class="link-dark csm-page-link">Cupoane</a></span></li>
+                <li class="footer"><span><a href="javascript:void(0);" class="link-dark csm-page-link">Informatii personale</a></span></li>
+              </ul>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-xl-3">
+              <ul>
+                <li class="footer"><span><b>INFORMATIILE MAGAZINULUI</b></span></li>
+                <li class="footer"><span><a href="javascript:void(0);" class="link-dark csm-page-link">România</a></span></li>
+                <li class="footer"><span><a href="javascript:void(0);" class="link-dark csm-page-link">Bucuresti</a></span></li>
+                <li class="footer"><span><a href="javascript:void(0);" class="link-dark csm-page-link">Suna-ne: 0741988555</a></span></li>
+                <li class="footer"><span><a href="javascript:void(0);" class="link-dark csm-page-link">E-mail: jighircatalin@yahoo.com</a></span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!--Section 5- Footer-->
+    <footer class="p-2 bg-secondary text-white text-center position-relative">
+      <div class="container">
+        <p class="lead pt-2">&copy; 2022 Rapitori Romanesti SRL. Toate drepturile rezervate</p>
+        <a href="#" class="position-absolute bottom-0 end-0 p-3 text-white"><i class="bi bi-arrow-up-circle h1"></i></a>
+      </div>
+    </footer>
+
+    <!-- JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="sign.js"></script>
+  </body>
+</html>
